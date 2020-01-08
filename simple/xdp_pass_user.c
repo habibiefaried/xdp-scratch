@@ -13,6 +13,8 @@ static const char *__doc__ = "Simple XDP prog doing XDP_PASS\n";
 #include <net/if.h>
 #include <linux/if_link.h> /* depend on kernel-headers installed */
 
+#include "../common/common_params.h"
+
 int load_bpf_object_file__simple(const char *filename)
 {
 	int first_prog_fd = -1;
