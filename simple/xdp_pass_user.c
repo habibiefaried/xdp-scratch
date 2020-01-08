@@ -96,7 +96,7 @@ int main(){
 		return EXIT_FAIL_BPF;
 	}
 
-	err = xdp_link_attach("ens5", "XDP_FLAGS_SKB_MODE", prog_fd);
+	err = xdp_link_attach("ens5", XDP_FLAGS_SKB_MODE, prog_fd);
 	if (err) return err;
 
 	/* This step is not really needed , BPF-info via bpf-syscall */
